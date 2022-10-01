@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+/.idea/codeStyles/codeStyleConfig.xml
+/.vscode/launch.json
+/.idea/modules.xml
+/.idea/codeStyles/Project.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.vscode/settings.json
+/.idea/vcs.xml
+/.idea/WishMeApi.iml
