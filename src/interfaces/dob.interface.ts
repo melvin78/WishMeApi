@@ -1,4 +1,4 @@
-export interface Dob {
+export interface DobInterface {
   _id: string;
   id: number;
   month: string;

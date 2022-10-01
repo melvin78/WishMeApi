@@ -1,4 +1,4 @@
-export interface Celebs {
+export interface CelebsInterface {
   type: string;
   celeb_birthyear: number;
   celeb_description: string;
