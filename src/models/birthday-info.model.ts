@@ -1,22 +1,22 @@
 import { getModelForClass, modelOptions, prop, PropType, Ref } from "@typegoose/typegoose";
 
-class Celeb {
-  @prop({ type: String, required: true })
-  public type: string;
+// class Celeb {
+//   @prop({ type: String, required: true })
+//   public type: string;
+//
+//   @prop({ type: String, required: true })
+//   public celeb_birthyear: string;
+//
+//   @prop({ type: String, required: true })
+//   public celeb_description: string;
+//
+//   @prop({ type: String, required: true })
+//   public celeb_bio: string;
+//
+// }
 
-  @prop({ type: String, required: true })
-  public celeb_birthyear: string;
 
-  @prop({ type: String, required: true })
-  public celeb_description: string;
-
-  @prop({ type: String, required: true })
-  public celeb_bio: string;
-
-}
-
-
-class Event {
+class Events {
   @prop({ type: String, required: true })
   public event_year: string;
 
@@ -38,12 +38,12 @@ class BirthDayInfo {
   public month: string;
 
   public date: number;
-  // required field, with empty array by default.
-  @prop({ ref: () => Celeb }, PropType.ARRAY)
-  public celebs?: Ref<Celeb>[];
+  // // required field, with empty array by default.
+  // @prop({ ref: () => Celeb }, PropType.ARRAY)
+  // public celebs?: Ref<Celeb>[];
 
-  @prop({ ref: () => Event }, PropType.ARRAY)
-  public events?: Ref<Event>[];
+  // @prop({ ref: () => Events }, PropType.ARRAY)
+  // public events?: Ref<Events>[];
 
 }
 

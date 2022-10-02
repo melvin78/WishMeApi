@@ -16,16 +16,18 @@ class BirthdayInfoController {
     }
   };
 
-  // public getUserById = async (req: Request, res: Response, next: NextFunction) => {
-  //   try {
-  //     const userId: string = req.params.id;
-  //     const findOneUserData: User = await this.birthDayInfoService.findUserById(userId);
-  //
-  //     res.status(200).json({ data: findOneUserData, message: 'findOne' });
-  //   } catch (error) {
-  //     next(error);
-  //   }
-  // };
+  public getBirthdayInfoByDateAndMonth = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const date: number = parseInt(req.params.date);
+      const month : string = req.params.month;
+
+      const findOneBirthdayInfoData: BirthdayInfoInterface = await this.birthDayInfoService.findBirthdayInfoByDateAndMonth(date,month);
+
+      res.status(200).json({ data: findOneBirthdayInfoData, message: 'findOne' });
+    } catch (error) {
+      next(error);
+    }
+  };
   //
   // public createUser = async (req: Request, res: Response, next: NextFunction) => {
   //   try {

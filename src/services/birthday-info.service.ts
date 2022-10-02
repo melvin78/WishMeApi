@@ -13,11 +13,13 @@ class BirthdayInfoService {
     return birthdayInfoModel.find();
   }
 
-  public async findBirthdayInfoById(userId: string): Promise<BirthdayInfoInterface> {
-    if (isEmpty(userId)) throw new HttpException(400, "UserId is empty");
+  public async findBirthdayInfoByDateAndMonth(date: number, month: string): Promise<BirthdayInfoInterface> {
+    if (isEmpty(date)) throw new HttpException(400, "Date is empty");
 
-    const findBirthdayInfo: BirthdayInfoInterface = await birthdayInfoModel.findOne({ _id: userId });
-    if (!findBirthdayInfo) throw new HttpException(409, "User doesn't exist");
+    if (isEmpty(month)) throw new HttpException(400, "Month is empty");
+
+    const findBirthdayInfo: BirthdayInfoInterface = await birthdayInfoModel.findOne({ date: date,month:month });
+    if (!findBirthdayInfo) throw new HttpException(409, "Month and date does not exist");
 
     return findBirthdayInfo;
   }

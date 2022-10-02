@@ -14,6 +14,8 @@ class BirthdayInfoRoutes implements Routes {
 
   private initializeRoutes() {
     this.router.get(`${this.path}`, this.birthdayInfoController.getBirthdayInfos);
+    this.router.get(`${this.path}/:date/:month`, this.birthdayInfoController.getBirthdayInfoByDateAndMonth);
+
 
   }
 }
