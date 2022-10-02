@@ -1,4 +1,4 @@
-import { prop, getModelForClass, modelOptions, Ref } from "@typegoose/typegoose";
+import { getModelForClass, modelOptions, prop, PropType, Ref } from "@typegoose/typegoose";
 
 class Celeb {
   @prop({ type: String, required: true })
@@ -29,8 +29,6 @@ class Event {
 
 }
 
-
-
 @modelOptions({ schemaOptions: { collection: 'main_dates', timestamps: true } })
 class BirthDayInfo {
   @prop({ type: String, required: true, unique: true })
@@ -40,12 +38,11 @@ class BirthDayInfo {
   public month: string;
 
   public date: number;
-
   // required field, with empty array by default.
-  @prop({ ref: () => Celeb })
+  @prop({ ref: () => Celeb }, PropType.ARRAY)
   public celebs?: Ref<Celeb>[];
 
-  @prop({ ref: () => Event })
+  @prop({ ref: () => Event }, PropType.ARRAY)
   public events?: Ref<Event>[];
 
 }

@@ -4,5 +4,5 @@ import { EventsInterface } from "@interfaces/events.interface";
 
 
 export interface BirthdayInfoInterface extends DobInterface,CelebsInterface,EventsInterface  {
-  id: number
+
 }

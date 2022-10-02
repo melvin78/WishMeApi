@@ -13,20 +13,20 @@ class BirthdayInfoService {
     return birthdayInfoModel.find();
   }
 
-  public async findUserById(userId: string): Promise<BirthdayInfoInterface> {
+  public async findBirthdayInfoById(userId: string): Promise<BirthdayInfoInterface> {
     if (isEmpty(userId)) throw new HttpException(400, "UserId is empty");
 
-    const findUser: BirthdayInfoInterface = await birthdayInfoModel.findOne({ _id: userId });
-    if (!findUser) throw new HttpException(409, "User doesn't exist");
+    const findBirthdayInfo: BirthdayInfoInterface = await birthdayInfoModel.findOne({ _id: userId });
+    if (!findBirthdayInfo) throw new HttpException(409, "User doesn't exist");
 
-    return findUser;
+    return findBirthdayInfo;
   }
 
   // public async createUser(userData: CreateUserDto): Promise<BirthdayInfoInterface> {
   //   if (isEmpty(userData)) throw new HttpException(400, "userData is empty");
   //
-  //   const findUser: BirthdayInfoInterface = await birthdayInfoModel.findOne({ email: userData.email });
-  //   if (findUser) throw new HttpException(409, `This email ${userData.email} already exists`);
+  //   const findBirthdayInfo: BirthdayInfoInterface = await birthdayInfoModel.findOne({ email: userData.email });
+  //   if (findBirthdayInfo) throw new HttpException(409, `This email ${userData.email} already exists`);
   //
   //   const hashedPassword = await hash(userData.password, 10);
   //   const createUserData: BirthdayInfoInterface = await birthdayInfoModel.create({ ...userData, password: hashedPassword });
@@ -38,8 +38,8 @@ class BirthdayInfoService {
     if (isEmpty(userData)) throw new HttpException(400, "userData is empty");
 
     if (userData.email) {
-      const findUser: User = await birthdayInfoModel.findOne({ email: userData.email });
-      if (findUser && findUser._id != userId) throw new HttpException(409, `This email ${userData.email} already exists`);
+      const findBirthdayInfo: User = await birthdayInfoModel.findOne({ email: userData.email });
+      if (findBirthdayInfo && findBirthdayInfo._id != userId) throw new HttpException(409, `This email ${userData.email} already exists`);
     }
 
     if (userData.password) {
