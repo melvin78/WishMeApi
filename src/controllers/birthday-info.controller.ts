@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from 'express';
-import { User } from '@interfaces/users.interface';
 import {BirthdayInfoInterface} from "@interfaces/birthday-info.interface";
 import BirthdayInfoService from "@services/birthday-info.service";
 
