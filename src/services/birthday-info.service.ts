@@ -16,7 +16,7 @@ class BirthdayInfoService {
 
     if (isEmpty(month)) throw new HttpException(400, "Month is empty");
 
-    console.log(date)
+
 
     const findBirthdayInfo: BirthdayInfoInterface = await birthdayInfoModel.findOne({ month:month ,date:date});
     if (!findBirthdayInfo) throw new HttpException(409, "Month and date does not exist");
