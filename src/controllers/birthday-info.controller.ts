@@ -20,6 +20,9 @@ class BirthdayInfoController {
       const date: number = parseInt(req.params.date);
       const month : string = req.params.month;
 
+      console.log(date)
+      console.log(month)
+
       const findOneBirthdayInfoData: BirthdayInfoInterface = await this.birthDayInfoService.findBirthdayInfoByDateAndMonth(date,month);
 
       res.status(200).json({ data: findOneBirthdayInfoData, message: 'findOne' });

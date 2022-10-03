@@ -37,7 +37,8 @@ class BirthDayInfo {
   @prop({ type: String, required: true })
   public month: string;
 
-  public date: number;
+  @prop({ type: Number, required: true })
+  public date: Number;
   // // required field, with empty array by default.
   // @prop({ ref: () => Celeb }, PropType.ARRAY)
   // public celebs?: Ref<Celeb>[];
