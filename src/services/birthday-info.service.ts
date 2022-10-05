@@ -5,7 +5,6 @@ import { isEmpty } from "@utils/util";
 import birthdayInfoModel from "@models/birthday-info.model";
 
 class BirthdayInfoService {
-  // public users = birthdayInfoModel;
 
   public async findAllBirthdayInfo(): Promise<BirthdayInfoInterface[]> {
     return birthdayInfoModel.find();
