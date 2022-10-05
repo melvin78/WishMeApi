@@ -9,16 +9,17 @@ RUN npm install
 
 EXPOSE 3000
 
-# Development build stage
-FROM common-build-stage as development-build-stage
-
-ENV NODE_ENV development
-
-CMD ["npm", "run", "dev"]
 
 # Production build stage
 FROM common-build-stage as production-build-stage
 
 ENV NODE_ENV production
+
+# Set any ENVs
+ARG DB_HOST=${DB_HOST}
+ARG DB_PORT=${DB_PORT}
+ARG DB_DATABASE=${DB_DATABASE}
+ARG DB_USER=${DB_USER}
+ARG DB_PASSWORD=${DB_PASSWORD}
 
 CMD ["npm", "run", "start"]

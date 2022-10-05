@@ -1,4 +1,3 @@
-import { hash } from "bcrypt";
 import { HttpException } from "@exceptions/HttpException";
 import {BirthdayInfoInterface} from  "@interfaces/birthday-info.interface";
 import { isEmpty } from "@utils/util";
