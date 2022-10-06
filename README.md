@@ -1,45 +1,35 @@
 <p align="center"><a href="https://price-tracker.webmelvin.me" target="_blank">
-<img src="https://raw.githubusercontent.com/melvin78/ToDoApp/master/ToDoApp/blob/pink.jpg" width="400"></a></p>
+<img src="https://raw.githubusercontent.com/melvin78/WishMeApi/master/blob/cake.png" width="400"></a></p>
 
 ## Demo
 
 Check out [here](https://wish-me.webmelvin.me)
 
-## To Do App
+## Birthday wisher
 
-This is a to do app created without writing a single line of Javascript code.
-With the introduction of web assembly its now possible to use programming languages
-like C#, C++,Rust to write code that will run in the browser.
-This project uses, [blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) an extension
-to the well known .NET Developer platform and [fluxor](https://github.com/mrpmorris/Fluxor)
-for state management. This is very much similar to react's redux but has been tailored to
-work with blazor.
+This project aims to give you information of events,births and deaths that occured on when you were born
+with a rough estimation of how many days,hours,seconds and minutes you have been breathing. The project is
+in two sections so be sure to check both.
+
+You can find the frontend to the project [here](https://github.com/melvin78/WishMe).
+Information about deaths,births and events have been sourced from [here](https://www.timeanddate.com/) and all
+credit goes to this codepen [here](https://codepen.io/shshaw/pen/KzYXvP) for the card flip animation.
+Thanks to [this](https://github.com/ljlm0402/typescript-express-starter) nice typescript-express starter template
+that scaffolds a node/express project with batteries included controllers,services,middlewares etc..
 
 
 ## ScreenShots
 
-### Main Page:
+### Events :
 
-<img src="https://raw.githubusercontent.com/melvin78/ToDoApp/master/ToDoApp/blob/nothing-yet.png" alt="here">
-
-
-### My Days' Tasks:
-
-<img src="https://raw.githubusercontent.com/melvin78/ToDoApp/master/ToDoApp/blob/task-list.png" alt="here">
-
-### Important Tasks:
-
-<img src="https://raw.githubusercontent.com/melvin78/ToDoApp/master/ToDoApp/blob/important.png" alt="here">
+<img src="https://github.com/melvin78/WishMeApi/blob/master/blob/events.png?raw=true" alt="here">
 
 
-### Completed Tasks:
+### Births:
 
-<img src="https://raw.githubusercontent.com/melvin78/ToDoApp/master/ToDoApp/blob/complete.png" alt="here">
+<img src="https://github.com/melvin78/WishMeApi/blob/master/blob/births.png?raw=true" alt="here">
 
-## Installation:
+### Deaths:
 
-```bash
-# Start Dev Server
-# Ensure you are in the project's root directory
-$ dotnet run
+<img src="https://github.com/melvin78/WishMeApi/blob/master/blob/deaths.png?raw=true" alt="here">
 
